@@ -2,15 +2,27 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name= "viewport" content="width=device-width, initial-scale=1">
         <title>Daily Schedule</title>
         <link rel = "icon" href ="https://e7.pngegg.com/pngimages/408/534/png-clipart-computer-icons-calendar-day-time-schedule-blue-angle.png" 
                 type = "image/x-icon">
     </head>
+    <style>
+        body{
+            padding: 10px;
+            background:url('https://images.ctfassets.net/lzny33ho1g45/work-from-home-schedule-p-img/b57e2dcc24b5e07f42d235b6affadd94/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760') ;
+            color: darkblue;
+        }
+        .dark-mode{
+            background: url('Dmodepic.jpeg');
+            color:peachpuff;
+        }
+    </style>
     
-    <body background="https://images.ctfassets.net/lzny33ho1g45/work-from-home-schedule-p-img/b57e2dcc24b5e07f42d235b6affadd94/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760">
-        <h1 style="color:darkblue;font-size:72px;font-family:jokerman"><u><i>Daily Schedule</i></u></h1>
+    <body>
+        <h1 style="font-size:72px;font-family:jokerman"><u><i>Daily Schedule</i></u></h1>
         
-        <ul style=" list-style:none;color:darkblue;font-size:22px;font-family:ink free">
+        <ul style=" list-style:none;font-size:22px;font-family:ink free">
             <li><input type="checkbox" id="1">
                 <label for="1">Go to bed in between 1 to 2am</label></li>
             <li><input type="checkbox" id="2">
@@ -30,6 +42,15 @@
             <li><input type="checkbox" id="9">
                 Slack off</label></li>
         </ul>
+        <button onclick="ChangeMode()">
+         Dark Mode
+        </button>
+        <script>
+            function ChangeMode() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+        </script>
     </body> 
     
 </html>
